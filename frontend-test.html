@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>TEST</title>
+	
+  
+</head>
+<style>
+    body{
+		background-color: #eee;
+	}
+	
+	* { box-sizing: border-box; }
+	.wrapper {
+	  background-color: white;
+	  -moz-box-shadow:    2px 2px 5px 6px #888888;
+      -webkit-box-shadow: 2px 2px 5px 6px #888888;
+      box-shadow:         2px 2px 5px 6px #888888;
+	  border-radius: 0.5em/0.5em;
+	  width: 1240px;
+	  margin: 50px 50px;
+	  padding: 40px 40px; 
+	  overflow: auto;
+	}
+	.row {
+		clear: both;
+	    overflow: auto;
+	}
+	
+	.articulos {
+		position: absolute;
+		text-transform: uppercase;
+		white-space: nowrap;
+		font-size: 1.5em; 
+		top: 0.30em;
+		left: 0.18em;
+	    color: white;
+		background-color: #d20000;
+		-webkit-transform:rotate(45deg) skew(20deg,20deg);
+
+	}
+	.col{
+		 float: left;
+		margin-left: 20px;
+		width: 60px;
+	}
+	.col.span2 { width: 14.58333333%; }
+	.col.span3 { width: 22.91666666%; }
+	.col.span4 { width: 31.24999999%; }
+	.col.span5 { width: 39.58333332%; }
+	.col.span6 { width: 47.91666665%; }
+	.col.span7 { width: 56.24999998%; }
+	.col.span8 { width: 64.58333331%; }
+	.col.span9 { width: 72.91666664%; }
+	.col.span10 { width: 81.24999997%; }
+	.col.span11 { width: 89.5833333%; }
+	.col.span12 { width: 97.91666663%; }
+	
+	.box{
+	   height: 300px;
+	}
+	.color-empty{
+	    background-color: white;
+	}
+	.color-1{
+		background: linear-gradient(180deg, #090, white);
+	}
+	.color-2{
+		background: linear-gradient(to right, #009 , white);
+	}
+	.color-3{
+		background: -webkit-linear-gradient(45deg,#909 40%,#990 60%);
+	}
+	.color-4{
+		background: radial-gradient(#099, #FFF);
+	}
+	.mt-10{
+	   margin-top: 10px;
+	}
+	
+	
+	.content-text{
+		padding: 5px;
+		display: block;
+	}
+	
+	
+	
+	.box-text{
+		position: relative;
+		background: #d20000;
+		float: left;
+		margin: 5px;
+	}
+
+	.box-text:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 0;
+	}
+	
+	.box-text:after, .box-text:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 0;
+	}
+	
+	.box-text:after {
+		right: 0;
+		border-left: 100px solid #d20000;
+		border-bottom: 200px solid white;
+	}
+
+	.slanted:hover{
+		background-color: #009;
+		transform: none;
+		
+	}
+	.slanted.slanted-left:hover:after{
+		background-color: #009;
+		transform: none;
+		border: none;
+		
+	}
+	
+	.slanted.slanted-left {
+		width: 100%;
+	}
+	
+	.slanted {
+		position: relative;
+		background: #d20000;
+		float: left;
+		margin: 0px;
+		padding: 10px;
+		color: white;
+	}
+	
+	.slanted:after, .slanted:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 0;
+	}
+	
+	.slanted-left.slant-to-left:after {
+		right: 0;
+		border-left: 25px solid #d20000;
+		border-bottom: 50px solid white;
+	}
+	.slanted:after, .slanted:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 0;
+		height: 0;
+	}
+	
+
+   .arrow-button {
+		position: absolute;
+		white-space: nowrap;
+		font-size: 1.5em; 
+		top: 1.1em;
+		left: 1.18em;
+	    color: white;
+		width:200px;
+		line-height:50px;
+		background:#d20000;
+		text-align:center;
+		font-weight: bold;
+	}
+	.arrow-tip-container {
+		display:block;
+		width:50px;
+		height:50px;
+		position:absolute;
+		top:0px;
+		right:-50px;
+		overflow:hidden;
+	}
+	.arrow-tip {
+		display:block;
+		width:50px;
+		height:50px;
+		margin:0 0 0 -20px;
+		-webkit-transform:rotate(45deg) skew(20deg,20deg);
+	}
+	.arrow-tip-grad {
+		display:block;
+		width:100%;
+		height:100%;
+		background:#d20000;
+	}
+	
+	.arrow-tip-container-first {
+		display:block;
+		width:50px;
+		height:50px;
+		position:absolute;
+		top:0px;
+		left:0px;
+		overflow:hidden;
+	}
+	.arrow-tip-first {
+		display:block;
+		width:50px;
+		height:50px;
+		margin:0 0 0 -20px;
+		-webkit-transform:rotate(45deg) skew(20deg,20deg);
+	}
+	.arrow-tip-grad-first {
+		display:block;
+		width:100%;
+		height:100%;
+		background:#eee;
+	}
+	
+</style>
+<body class="">
+	 <div class="wrapper">
+	  
+	  <div class="arrow-button">
+	  <span class="arrow-tip-container-first">
+			<span class="arrow-tip-first">
+				<span class="arrow-tip-grad-first"></span>
+			</span>
+		</span>
+			Articulos
+		<span class="arrow-tip-container">
+			<span class="arrow-tip">
+				<span class="arrow-tip-grad"></span>
+			</span>
+		</span>
+    
+	   </div>
+	  
+      <div class="row">
+		 <div class="col span4">
+			<div class="box color-1"></div>
+		 </div>
+		 <div class="col span4">
+			<div class="box color-2"></div>
+		 </div>
+         <div class="col span4">
+			<div class="box color-3"></div>
+		 </div>
+      </div>
+      <div class="row">
+        <div class="col span4">
+			<div class="slanted slanted-left slant-to-left">
+				<a class="content-text">
+					Articulo 1
+				</a>
+			</div>
+		</div>
+        <div class="col span4">
+			<div class="slanted slanted-left slant-to-left">
+				<a class="content-text">
+					Articulo 2
+				</a>
+			</div>
+		</div>
+        <div class="col span4">
+			<div class="slanted slanted-left slant-to-left">
+				<a class="content-text">
+					Articulo 3
+				</a>
+			</div>
+		</div>
+      </div>
+	  <!-- row 2 -->
+	   <div class="row mt-10" >
+         <div class="col span4">
+			<div class="box color-empty"></div>
+		 </div>
+		 <div class="col span4">
+			<div class="box color-4"></div>
+		 </div>
+         <div class="col span4">
+		 </div>
+      </div>
+      <div class="row">
+        <div class="col span4"><a class="content-text"></a></div>
+        <div class="col span4">
+		     <div class="slanted slanted-left slant-to-left">
+				<a class="content-text">
+					Articulo 4
+				</a>
+			</div>
+		</div>
+        <div class="col span4"></div>
+      </div>
+	     
+    </div>
+</body>
+<html>
